@@ -5,6 +5,15 @@
 using namespace std;
 typedef unsigned char byte;
 
+/*
+ hex = 0 - F ( 0 to 16 )
+ 0xF8 =  1111  1000
+
+
+ base64 = A - / ( 0 to 64)
+*/
+
+
 static const string base64_chars = 
   "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
   "abcdefghijklmnopqrstuvwxyz"
@@ -65,7 +74,7 @@ int main()
   string hexString = "49276d206b696c6c696e6720796f757220627261696e206c696b65206120706f69736f6e6f7573206d757368726f6f6d";
   string base64String = "SSdtIGtpbGxpbmcgeW91ciBicmFpbiBsaWtlIGEgcG9pc29ub3VzIG11c2hyb29t";
   char c = 'c';
-  byte b = c;
+  byte b = from_hex_to_decimal(c) | 0xC;
   cout << sizeof(c) << " " << c << " and b " << b << endl;
 //  cout << from_hex_to_base64(hexString);
   return 0;
