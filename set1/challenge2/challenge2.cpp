@@ -82,9 +82,8 @@ string fixedXOR(string s1, string s2)
 		{
 			int x = from_hex_to_decimal(s1[i]);
 			int y = from_hex_to_decimal(s2[i]);
-			int a = x & y;
-			int b = !x & !y;
-			int c = !a & !b;
+			
+			int c = x ^ y; // ^ means XOR
 
 			result += from_decimal_to_hex(c);
 		}
@@ -101,6 +100,5 @@ int main()
 	string s3 = "746865206b696420646f6e277420706c6179";
 	cout << "Expected result:\t" << s3 << endl;
 	cout << "Actual result:\t\t" << fixedXOR(s1, s2) << endl;
-	
 	return 0;
 }
