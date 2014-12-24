@@ -49,6 +49,7 @@ string from_hex_to_base64(string s){
 
     char a = from_byte_to_base64(c0, c1, true);
     char b = from_byte_to_base64(c1, c2, false);
+    // notice how there's no (c2, c3)
     char c = from_byte_to_base64(c3, c4, true);
     char d = from_byte_to_base64(c4, c5, false);
     result <<  a << b << c << d;
