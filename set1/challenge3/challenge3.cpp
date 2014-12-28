@@ -13,9 +13,18 @@ int from_hex_to_decimal(char hex)
         return hex - 'a' + 10;
 }
 
+string getStats(string s)
+{
+       cout << "Total characters: " << s.length() << endl;
+      // get count of each char
+
+}
+
 int main(int args, char** argv)
 {
         string s = "1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736";
+        bool test = true;
+        if(test)
         for(int i = 0; i < 128; i++)
         {
                 char keyChar = i;
